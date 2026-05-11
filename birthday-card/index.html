@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fredoka:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="card-blob">
+            <!-- Decorative corner blobs inside the container -->
+            <div class="bg-blob blob-left"></div>
+            <div class="bg-blob blob-bottom-right"></div>
+
+            <div class="card-content">
+                <!-- Screen 1: Intro -->
+                <div class="screen active" id="screen-1">
+                    <div class="animate-float" style="width: 180px; height: 180px; margin-bottom: 20px;">
+                        <img src="dog.jpg" alt="Birthday Dog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <h1 class="title animate-pop">Happiestt Birthday Officer💗💗</h1>
+                    <p class="subtitle animate-fade-in-up" style="animation-delay: 0.3s;">YOU ARE MY BESTESTTT FRIEND 💌
+                    </p>
+                    <p class="subtitle animate-fade-in-up" style="animation-delay: 0.6s;">STAY CUTE, STAY HAPPY, STAY
+                        STRONG 🔪❤️</p>
+                    <button class="btn-nav animate-fade-in-up" style="animation-delay: 1s;"
+                        onclick="nextScreen('screen-2')">Next</button>
+                </div>
+
+                <!-- Screen 2: Question -->
+                <div class="screen" id="screen-2">
+                    <h1 class="title hey-text animate-pop">HEY!!</h1>
+                    <div class="question-row animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="question-col">
+                            <p class="cursive-text">I made something for you</p>
+                            <p class="cursive-text" style="font-size: 3rem; margin-top: -10px;">Do you want to see?</p>
+                        </div>
+                        <div style="width: 160px; height: 160px;">
+                            <img src="sideye.jpg" alt="Dog"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                    </div>
+                    <div class="btn-group animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <button class="btn btn-primary" onclick="nextScreen('screen-4')">Yes</button>
+                        <button class="btn btn-secondary" onclick="nextScreen('screen-3')">No</button>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Angry (No) -->
+                <div class="screen" id="screen-3">
+                    <div class="animate-shake" style="width: 220px; height: 220px; margin-bottom: 20px;">
+                        <img src="angry.jpg" alt="Angry Dog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <h1 class="title animate-pop" style="font-size: 3.5rem;">HOW DARE YOU</h1>
+                    <button class="btn btn-secondary animate-fade-in-up"
+                        style="margin-top: 30px; animation-delay: 0.3s;" onclick="nextScreen('screen-2')">Go
+                        back</button>
+                </div>
+
+                <!-- Screen 4: Good Girl (Yes) -->
+                <div class="screen" id="screen-4">
+                    <div class="animate-pop"
+                        style="width: 220px; height: 220px; margin-bottom: 20px; border-radius: 50%; overflow: hidden;">
+                        <img src="good.png" alt="Dog with Kisses" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <p class="cursive-text animate-fade-in-up"
+                        style="font-size: 3.5rem; color: #b85a67; font-weight: 700;">That's a good Gurlll 🌻</p>
+                    <button class="btn btn-primary animate-fade-in-up" style="margin-top: 30px; animation-delay: 0.3s;"
+                        onclick="nextScreen('screen-5')">Click</button>
+                </div>
+
+                <!-- Screen 5: Surprise -->
+                <div class="screen" id="screen-5">
+                    <p class="cursive-text animate-fade-in-up"
+                        style="font-size: 3.5rem; color: #b85a67; font-weight: 700; margin-bottom: 40px;">Here's a
+                        surprise for you!!!</p>
+                    <div class="gift-container animate-pop" style="animation-delay: 0.3s;"
+                        onclick="nextScreen('screen-6')">
+                        <div class="animate-float" style="width: 250px; height: 250px;">
+                            <img src="click.jpg" alt="Gift Box" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <p class="tap-here">Tap here</p>
+                        <!-- Simple curved arrow SVG pointing from tap here to the box -->
+                        <svg class="tap-arrow" width="80" height="50" viewBox="0 0 80 50">
+                            <path d="M70,40 Q40,40 10,10" fill="none" stroke="#666" stroke-width="2" />
+                            <polygon points="10,10 20,5 5,0" fill="#666" />
+                        </svg>
+                    </div>
+                    <div class="peeking-dog animate-fade-in-up" style="animation-delay: 0.6s; overflow: hidden;">
+                        <img src="peeking.jpg" alt="Peeking Dog"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px 20px 0 0;">
+                    </div>
+                </div>
+
+                <!-- Screen 6: Virtual Hug -->
+                <div class="screen" id="screen-6">
+                    <p class="cursive-text animate-fade-in-up"
+                        style="font-size: 3.5rem; color: #b85a67; font-weight: 700; margin-bottom: 40px;">This is your
+                        future btw🤭</p>
+                    <div class="animate-pop"
+                        style="animation-delay: 0.3s; width: 300px; height: 300px; border-radius: 20px; overflow: hidden;">
+                        <img src="Lt AD.png" alt="Future"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                    <div class="decorative-flowers animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <img src="Flowers.jpg" alt="Flowers"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <button class="btn-nav animate-fade-in-up" style="animation-delay: 1s;"
+                        onclick="nextScreen('screen-7')">Next</button>
+                </div>
+
+                <!-- Screen 7: Polaroids -->
+                <div class="screen" id="screen-7">
+                    <div class="polaroid-string animate-fade-in-down">
+                        <svg class="string-line" width="100%" height="80" preserveAspectRatio="none">
+                            <path d="M 0 30 Q 50% 80 100% 30" fill="transparent" stroke="#fff" stroke-width="3"
+                                stroke-dasharray="10,5" />
+                        </svg>
+
+                        <div class="polaroid" style="transform: rotate(-8deg); margin-top: 10px;">
+                            <div class="clip"></div>
+                            <div class="polaroid-img" style="overflow: hidden;"><img src="pic1.jpg" alt="Pic 1"
+                                    style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                        <div class="polaroid" style="transform: rotate(3deg); margin-top: 30px;">
+                            <div class="clip"></div>
+                            <div class="polaroid-img" style="overflow: hidden;"><img src="pic2.jpg" alt="Pic 2"
+                                    style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                        <div class="polaroid" style="transform: rotate(10deg); margin-top: 5px;">
+                            <div class="clip"></div>
+                            <div class="polaroid-img" style="overflow: hidden;"><img src="pic3.jpg" alt="Pic 3"
+                                    style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                    </div>
+
+                    <h1 class="title love-text animate-pop" style="animation-delay: 0.6s; margin-top: 50px;">
+                        HAPPIEST <span class="heart">♥</span> BIRTHDAY <span class="heart">♥</span> KHUSHIE
+                    </h1>
+                    <p class="subtitle love-subtext animate-fade-in-up" style="animation-delay: 0.9s;">
+                        You don't know how much you mean to me
+                    </p>
+
+                    <div class="decorative-cake animate-fade-in-up" style="animation-delay: 1.2s; overflow: hidden;">
+                        <img src="cake.jpg" alt="Cake"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+
+                    <button class="btn-nav gift-btn animate-fade-in-up" style="animation-delay: 1.5s;"
+                        onclick="nextScreen('screen-8')">
+                        <div class="mini-gift" style="overflow: hidden; border: none;"><img src="giftr.jpg" alt="Gift"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"></div>
+                        Click here
+                    </button>
+                </div>
+
+                <!-- Screen 8: Envelope Closed -->
+                <div class="screen" id="screen-8" onclick="nextScreen('screen-9')" style="cursor: pointer;">
+                    <div class="envelope-container animate-float">
+                        <div style="width: 380px; height: 260px; border-radius: 10px; overflow: hidden;">
+                            <img src="close clear.png" alt="Closed Envelope" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                    </div>
+                    <p class="cursive-text tap-open-text animate-pop" style="animation-delay: 0.3s;">Tap here to open
+                    </p>
+                    <div class="image-placeholder decorative-flowers-right animate-fade-in-up"
+                        style="animation-delay: 0.6s;">
+                        <span>Flowers<br>(Add image)</span>
+                    </div>
+                </div>
+
+                <!-- Screen 9: Envelope Opened -->
+                <div class="screen" id="screen-9">
+                    <div class="opened-envelope-container animate-pop">
+                        <div style="width: 480px; height: 380px; overflow: hidden;">
+                            <img src="open clear.png" alt="Opened Envelope" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <div class="letter-content animate-fade-in-up" style="animation-delay: 0.5s;">
+                            <p class="cursive-text letter-text">
+                                You are going to become an Lieutenant very soon just don't give up.
+                                I am always with you no matter what you do . I Lovee Youu💗💗
+                            </p>
+                        </div>
+
+                        <div class="dog-locket animate-fade-in-up" style="animation-delay: 0.8s;">
+                            <img src="Tulip.jpg" alt="Tulip"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+
+
+                    </div>
+                    <button class="btn-nav start-over-btn animate-fade-in-up" style="animation-delay: 1.5s;"
+                        onclick="nextScreen('screen-1')">Start Over</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
