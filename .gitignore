@@ -1,0 +1,9 @@
+# Root-level image duplicates (originals kept in birthday-card/)
+/*.jpg
+/*.png
+/*.jpeg
+/*.gif
+/*.webp
+
+# Keep birthday-card images tracked (needed for deployment)
+!birthday-card/
