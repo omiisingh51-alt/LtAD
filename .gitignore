@@ -1,9 +1,12 @@
-# Root-level image duplicates (originals kept in birthday-card/)
-/*.jpg
-/*.png
-/*.jpeg
-/*.gif
-/*.webp
-
-# Keep birthday-card images tracked (needed for deployment)
-!birthday-card/
+# Ignore all image files (everywhere in the repo)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.svg
+*.ico
+*.tiff
+*.tif
+*.avif
